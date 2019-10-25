@@ -1,6 +1,6 @@
 <template>
   <div id="content">
-    <b-navbar toggleable="lg" type="light" variant="light">
+    <b-navbar toggleable="lg" type="dark" variant="dark">
       <div class="container col-11">
         <b-navbar-brand href="#">Piersanti Dylan</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -54,13 +54,13 @@
                 <div class="row">
                   <ul class="col-12">
                     <li>
-                      <h4 class="fa fa-birthday-cake"> - 17/08/1994</h4>
+                      <h4 class="fa fa-birthday-cake">- 17/08/1994</h4>
                     </li>
                     <li>
-                      <h4 class="fa fa-home"> - 55120 - Auzeville</h4>
+                      <h4 class="fa fa-home">- 55120 - Auzeville</h4>
                     </li>
                     <li>
-                      <h4 class="fa fa-phone"> - 07.68.45.52.69</h4>
+                      <h4 class="fa fa-phone">- 07.68.45.52.69</h4>
                     </li>
                   </ul>
                 </div>
@@ -69,7 +69,15 @@
           </b-col>
         </b-row>
       </b-card>
+      <b-container class="bv-example-row">
+        <b-row class="blockContent">
+          <b-col class="competences mx-5">Column</b-col>
+          <b-col class="experience mx-5">Column</b-col>
+        </b-row>
+      </b-container>
     </header>
+
+    <div class="blockContent row col-12"></div>
   </div>
 </template>
 
@@ -87,9 +95,6 @@ export default {
 </script>
 
 <style>
-html {
-  background-color: #161417;
-}
 
 header {
   position: absolute;
@@ -130,6 +135,21 @@ li {
   text-decoration: none;
 }
 
+.middContainer {
+  background-color: #fff;
+  height: 500px;
+  width: 200px;
+}
+
+.blockContent {
+  margin-top: 25px;
+}
+
+.competences, .experience {
+  height: 200px;
+  width: 300px;
+  background-color: #272c2e;
+}
 @media (max-width: 1367px) {
   header {
     position: absolute;
@@ -140,20 +160,20 @@ li {
   }
 
   li {
-  margin-top: 40px;
-  list-style: none;
-  font-size: 13px;
-  text-align: center;
-}
-
-.socialList {
-  margin-left: 15%;
-}
-
-@media (max-width: 900px) {
-  .socialList {
-    margin-left: -8px;
+    margin-top: 40px;
+    list-style: none;
+    font-size: 13px;
+    text-align: center;
   }
-}
+
+  .socialList {
+    margin-left: 15%;
+  }
+
+  @media (max-width: 900px) {
+    .socialList {
+      margin-left: -8px;
+    }
+  }
 }
 </style>
